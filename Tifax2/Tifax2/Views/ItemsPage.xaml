@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:TIFA.Models"
+             xmlns:util="clr-namespace:TIFA.Util"
+             mc:Ignorable="d"  BackgroundColor="Azure"
+             x:Class="TIFA.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Novo Placar" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="OnItemSelected">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type models:Participante}">
+                    <models:Classificacao Posicao="1">
+                        <models:Classificacao.Jogador>
+                            <x:String>Jira</x:String>
+                        </models:Classificacao.Jogador>
+                    </models:Classificacao>
+                    <models:Classificacao Posicao="2">
+                        <models:Classificacao.Jogador>
+                            <x:String>Felipe</x:String>
+                        </models:Classificacao.Jogador>                        
+                    </models:Classificacao>
+                    <models:Classificacao Posicao="3">
+                        <models:Classificacao.Jogador>
+                            <x:String>Carielo</x:String>
+                        </models:Classificacao.Jogador>                        
+                    </models:Classificacao>
+                    <models:Classificacao Posicao="4">
+                        <models:Classificacao.Jogador>
+                            <x:String>Paulo</x:String>
+                        </models:Classificacao.Jogador>                        
+                    </models:Classificacao>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Path=Posicao, , StringFormat={x:Static util:Constantes.FMT_NUM_PARC}}"  
+                                   FontSize="20" Grid.Column="0"
+                                   TextColor="Black"
+                                   d:Text="{Binding Path=Posicao}"/>
+                            <Image WidthRequest="16"  Grid.Column="1" >
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding TipoIcone}" Value="lider"
+                                                          TargetType="Image"
+                                                         >
+                                                <Setter Property="Source" Value="crown.png"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding TipoIcone}" Value="subiu" TargetType="Image">
+                                                <Setter Property="Source" Value="sort_up_green.png"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding TipoIcone}" Value="caiu" TargetType="Image">
+                                                <Setter Property="Source" Value="sort_down_red.png" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                            <Label Text="{Binding Path=Jogador}" d:Text="{Binding Path=Jogador}"
+                                LineBreakMode="NoWrap" TextColor="Black" Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="20" Grid.Column="2"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "271054555195",
+    "firebase_url": "https://gibis-tifa.firebaseio.com",
+    "project_id": "gibis-tifa",
+    "storage_bucket": "gibis-tifa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271054555195:android:2e9fd643431ee270f1741e",
+        "android_client_info": {
+          "package_name": "br.com.colossusinformatica.gibis.tifa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271054555195-89r2hc2srsnhpvdrr9ci6m3d7l78rgva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyqIAOFaSFvMQLaTWhmvSxoRXmcsQxBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271054555195-89r2hc2srsnhpvdrr9ci6m3d7l78rgva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

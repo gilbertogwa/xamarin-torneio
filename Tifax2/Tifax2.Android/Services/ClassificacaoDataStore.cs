@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Firebase.Database;
+using Firebase.Database.Streaming;
+using Newtonsoft.Json;
+using TIFA.Models;
+using TIFA.Services;
+
+namespace TIFA.Droid.Services
+{
+    public class ClassificacaoDataStore : IDataStore<Classificacao>
+    {
+
+        private const string URL_DB = "https://gibis-tifa.firebaseio.com/";
+        private const string NAME_DB = "gibis-tifa";
+
+        private readonly FirebaseClient _database;
+
+        public ClassificacaoDataStore()
+        {
+
+            _database = new FirebaseClient(URL_DB);
+        }
+
+        public async Task<bool> AddItemAsync(Classificacao item)
+        {
+            var db =_database.Child($"classificacao/{item.Jogador}");
+           
+            var json = JsonConvert.SerializeObject(item);
+
+            await db.PutAsync(json);
+
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteItemAsync(string id)
+        {
+            return await Task.FromResult(true);
+        }
+
+        public Task<Classificacao> GetItemAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Classificacao>> GetItemsAsync(bool forceRefresh = false)
+        {
+            var response = await _database.Child("classificacao").OnceSingleAsync<Dictionary<string,Classificacao>>();
+
+            var itens = response.Where(a=> a.Key != null)
+                .Select(a=> a.Value)
+                .OrderBy(a => a.Posicao)
+                .ToArray();
+
+            return await Task.FromResult(itens);
+        }
+
+        public void Listen(ObservableCollection<Classificacao> jogadores)
+        {
+        }
+
+        public async Task<bool> UpdateItemAsync(Classificacao item)
+        {
+            return await Task.FromResult(true);
+        }
+    }
+}
