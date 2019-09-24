@@ -35,10 +35,13 @@ namespace TIFA.Droid.Services
         public async Task<bool> AddItemAsync(Placar item)
         {
             var j1 = item.JogadorA.Nome.Trim().Replace(" ", "_").ToLower();
+            j1 = j1 + "_p" + item.PosicaoA;
+
             var j2 = item.JogadorB.Nome.Trim().Replace(" ", "_").ToLower();
+            j2 = j2 + "_p" + item.PosicaoB;
+
             var jogadores = string.Compare(j1, j2) <= 0 ? $"{j1}_{j2}" : $"{j2}_{j1}";
             var id = item.Data.ToString("yyyy_MM_dd_") + jogadores;
-
 
             var db =_database.Child($"placares/{id}");
            

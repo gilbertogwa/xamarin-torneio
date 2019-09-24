@@ -25,7 +25,20 @@ namespace TIFA.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+
+#if DEBUG
+            var button = new Button()
+            {
+                Text = "Recalcular"
+               
+            };
+
+            button.Clicked += (a, b) => viewModel.RecalcularClassificacaoAsync();
+            container.Children.Insert(0, button);
+#endif
         }
+
+        
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {

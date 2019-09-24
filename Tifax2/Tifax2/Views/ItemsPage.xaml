@@ -14,7 +14,7 @@
         <ToolbarItem Text="Novo Placar" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
+    <StackLayout x:Name="container">
 
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"

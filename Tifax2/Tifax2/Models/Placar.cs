@@ -28,6 +28,10 @@ namespace TIFA.Models
 
         public DateTime DataPublicacao { get; set; }
 
+        public int PosicaoA { get; set; }
 
+        public int PosicaoB { get; set; }
+        public int? PosicaoAntB { get;  set; }
+        public int? PosicaoAntA { get;  set; }
     }
 }

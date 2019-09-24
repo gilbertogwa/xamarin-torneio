@@ -38,26 +38,50 @@ namespace TIFA.ViewModels
 
             MessagingCenter.Subscribe<NewItemPage, Placar>(this, "AddItem", async (obj, item) =>
             {
+
+                var clas = ((await DataStore.GetItemsAsync(true)) ?? new Classificacao[0])
+                    .OrderBy(a => a.Posicao)
+                    .ToArray();
+
+
                 var newItem = item as Placar;
+
+                var clasJA = clas.FirstOrDefault(a => a.Jogador == newItem.JogadorA.Nome);
+                var clasJB = clas.FirstOrDefault(a => a.Jogador == newItem.JogadorB.Nome);
+
+                newItem.PosicaoA = (clasJA?.Posicao) ?? 99;
+                newItem.PosicaoAntA = (clasJA?.PosicaoAnterior) ;
+                newItem.PosicaoB = (clasJB?.Posicao) ?? 99;
+                newItem.PosicaoAntB = (clasJB?.PosicaoAnterior);
+
                 await PlacarDataStore.AddItemAsync(newItem);
 
-                RecalcularClassificacaoAsync();
+                RecalcularClassificacaoAsync(clas);
 
             });
 
         }
 
-        private async void RecalcularClassificacaoAsync()
+        public async void RecalcularClassificacaoAsync(Classificacao[] clas = null)
         {
 
-            var clas = (await DataStore.GetItemsAsync(true))?.ToArray();
+            if (clas == null)
+            {
+                clas = ((await DataStore.GetItemsAsync(true)) ?? new Classificacao[0])
+                    .OrderBy(a => a.Posicao)
+                    .ToArray();
+            }
+
 
             if (clas == null && clas.Length == 0) return;
 
+            var ultimaPosicao = clas[clas.Length - 1].Posicao;
             var placares = (await PlacarDataStore.GetItemsAsync(true))?.ToArray();
             var dataMaisAntiga = clas.Select(a => a.Data).OrderBy(a => a).First();
 
-            placares = placares.Where(a => a.Data >= dataMaisAntiga).ToArray();
+            placares = placares.Where(a => a.Data >= dataMaisAntiga)
+                .OrderBy(a=> a.DataPublicacao)
+                .ToArray();
 
             foreach (var placar in placares)
             {
@@ -67,15 +91,20 @@ namespace TIFA.ViewModels
                 if (clasJogadorA == null || clasJogadorB == null) continue;
                 if (placar.JogadorAGols == null ||  placar.JogadorBGols == null) continue;
 
+                if (placar.JogadorAGols == placar.JogadorBGols) continue;
+
+                clasJogadorA.Posicao = placar.PosicaoA;
+                clasJogadorA.PosicaoAnterior = placar.PosicaoAntA;
+                clasJogadorB.Posicao = placar.PosicaoB;
+                clasJogadorB.PosicaoAnterior = placar.PosicaoAntB;
+
                 if (placar.JogadorAGols > placar.JogadorBGols)
                 {
-                    if (clasJogadorA.Posicao < clasJogadorB.Posicao) continue;
-                    TrocarPosicacao(clasJogadorA, clasJogadorB);
-                }
-                else
+                    AtualizarPosicao(clas, ultimaPosicao, clasJogadorA, clasJogadorB);
+                    continue;
+                } else
                 {
-                    if (clasJogadorB.Posicao < clasJogadorA.Posicao) continue;
-                    TrocarPosicacao(clasJogadorB, clasJogadorA);
+                    AtualizarPosicao(clas, ultimaPosicao, clasJogadorB, clasJogadorA);
                 }
 
             }
@@ -86,6 +115,35 @@ namespace TIFA.ViewModels
             }
 
             await ExecuteLoadClassificacaoCommand();
+        }
+
+        private void AtualizarPosicao(Classificacao[] clas, int ultimaPosicao, Classificacao vencedor, Classificacao derrotado)
+        {
+            if (vencedor.Posicao < derrotado.Posicao)
+            {
+                Rebaixar(clas, derrotado, ultimaPosicao);
+            }
+            else
+            {
+                TrocarPosicacao(vencedor, derrotado);
+            }
+        }
+
+        private void Rebaixar(Classificacao[] clas, Classificacao derrotado, int ultimaPosicao)
+        {
+
+            if (derrotado.Posicao == ultimaPosicao) return;
+
+            var clasTroca = clas.Where(a => a.Posicao == derrotado.Posicao + 1)
+                .FirstOrDefault();
+
+            if (clasTroca == null) return;
+
+            derrotado.PosicaoAnterior = derrotado.Posicao;
+            clasTroca.PosicaoAnterior = clasTroca.Posicao;
+            derrotado.Posicao = clasTroca.Posicao;
+            clasTroca.Posicao = derrotado.PosicaoAnterior.Value;
+
         }
 
         private static void TrocarPosicacao(Classificacao clasJogadorA, Classificacao clasJogadorB)
