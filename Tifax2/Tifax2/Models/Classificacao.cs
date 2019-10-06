@@ -34,6 +34,17 @@ namespace TIFA.Models
             }
         }
 
+        public int? TotalVitorias { get; set; }
+
+        public int? TotalDerrotas { get; set; }
+
+        public int? TotalEmpates { get; set; }
+
+        public int? TotalGolsFeitos { get; set; }
+
+        public int? TotalGolsTomados { get; set; }
+
+
         [JsonIgnore]
         public string TipoIcone
         {
@@ -50,6 +61,9 @@ namespace TIFA.Models
             }
         }
 
+        [JsonIgnore]
+        public bool Alterado { get; set; }
+        public int TotalJogos { get; set; }
     }
 
 }

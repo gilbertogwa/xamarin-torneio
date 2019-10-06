@@ -18,19 +18,9 @@ using TIFA.Services;
 
 namespace TIFA.Droid.Services
 {
-    public class PlacarDataStore : IDataStore<Placar>
+    public class PlacarDataStore : DataStoreBase, IDataStore<Placar>
     {
 
-        private const string URL_DB = "https://gibis-tifa.firebaseio.com/";
-        private const string NAME_DB = "gibis-tifa";
-
-        private readonly FirebaseClient _database;
-
-        public PlacarDataStore()
-        {
-
-            _database = new FirebaseClient(URL_DB);
-        }
 
         public async Task<bool> AddItemAsync(Placar item)
         {

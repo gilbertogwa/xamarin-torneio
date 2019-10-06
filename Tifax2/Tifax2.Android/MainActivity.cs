@@ -36,6 +36,8 @@ namespace TIFA.Droid
             DependencyService.Register<ClassificacaoDataStore>();
             DependencyService.Register<JogadoresDataStore>();
             DependencyService.Register<PlacarDataStore>();
+            DependencyService.Register<ClassificacaoInicialDataStore>();
+            DependencyService.Register<ConfigDataStore>();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

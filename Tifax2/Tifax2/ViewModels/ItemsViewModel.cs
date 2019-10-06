@@ -9,12 +9,24 @@ using TIFA.Models;
 using TIFA.Views;
 using TIFA.Services;
 using System.Collections.Generic;
+using Tifax2.Models;
 
 namespace TIFA.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public IDataStore<Jogador> JogadorDataStore => DependencyService.Get<IDataStore<Jogador>>();
+
+        
+        public IEnumerable<Regra> Regras { get; set; } = RegrasBusiness.GetList();
+
+        public static IDataStoreList<Config> ConfigDataStore
+    => DependencyService.Get<IDataStoreList<Config>>();
+
+
+        public static IDataStoreList<ClassificacaoInicial> ClassificacaoInicialStore 
+            => DependencyService.Get<IDataStoreList<ClassificacaoInicial>>();
+        
+        public static IDataStore<Jogador> JogadorDataStore => DependencyService.Get<IDataStore<Jogador>>();
 
         public IDataStore<Placar> PlacarDataStore => DependencyService.Get<IDataStore<Placar>>();
 
@@ -44,19 +56,27 @@ namespace TIFA.ViewModels
                     .ToArray();
 
 
-                var newItem = item as Placar;
+                var novoPlacar = item as Placar;
 
-                var clasJA = clas.FirstOrDefault(a => a.Jogador == newItem.JogadorA.Nome);
-                var clasJB = clas.FirstOrDefault(a => a.Jogador == newItem.JogadorB.Nome);
+                var clasJA = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorA.Nome);
+                var clasJB = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorB.Nome);
 
-                newItem.PosicaoA = (clasJA?.Posicao) ?? 99;
-                newItem.PosicaoAntA = (clasJA?.PosicaoAnterior) ;
-                newItem.PosicaoB = (clasJB?.Posicao) ?? 99;
-                newItem.PosicaoAntB = (clasJB?.PosicaoAnterior);
+                //if (novoPlacar.Regra.Nome == RegrasBusiness.AMISTOSO)
+                //{
+                //    await PlacarDataStore.AddItemAsync(novoPlacar);
+                //    return;
+                //}
 
-                await PlacarDataStore.AddItemAsync(newItem);
+                var ultimaPosicao = clas[clas.Length - 1].Posicao;
 
-                RecalcularClassificacaoAsync(clas);
+                novoPlacar.PosicaoA = (clasJA?.Posicao) ?? (++ultimaPosicao);
+                novoPlacar.PosicaoAntA = (clasJA?.PosicaoAnterior) ;
+                novoPlacar.PosicaoB = (clasJB?.Posicao) ?? (++ultimaPosicao);
+                novoPlacar.PosicaoAntB = (clasJB?.PosicaoAnterior);
+
+                await PlacarDataStore.AddItemAsync(novoPlacar);
+
+                RecalcularClassificacaoAsync(null);
 
             });
 
@@ -65,33 +85,56 @@ namespace TIFA.ViewModels
         public async void RecalcularClassificacaoAsync(Classificacao[] clas = null)
         {
 
+            var classifs = new List<Classificacao>();
+
             if (clas == null)
             {
-                clas = ((await DataStore.GetItemsAsync(true)) ?? new Classificacao[0])
+                clas = (await ClassificacaoInicialStore.GetItemsAsync())
+                    .Select(a => a.Clone())
                     .OrderBy(a => a.Posicao)
                     .ToArray();
             }
 
-
-            if (clas == null && clas.Length == 0) return;
+            classifs.AddRange(clas);
 
             var ultimaPosicao = clas[clas.Length - 1].Posicao;
-            var placares = (await PlacarDataStore.GetItemsAsync(true))?.ToArray();
+            var placares = (await PlacarDataStore.GetItemsAsync(true)).ToArray();
             var dataMaisAntiga = clas.Select(a => a.Data).OrderBy(a => a).First();
 
             placares = placares.Where(a => a.Data >= dataMaisAntiga)
-                .OrderBy(a=> a.DataPublicacao)
+                .OrderBy(a => a.DataPublicacao)
                 .ToArray();
-
+            
             foreach (var placar in placares)
             {
-                var clasJogadorA = clas.FirstOrDefault(a => a.Jogador == placar.JogadorA.Nome);
-                var clasJogadorB = clas.FirstOrDefault(a => a.Jogador == placar.JogadorB.Nome);
 
-                if (clasJogadorA == null || clasJogadorB == null) continue;
-                if (placar.JogadorAGols == null ||  placar.JogadorBGols == null) continue;
+                if (placar.JogadorAGols == null || placar.JogadorBGols == null) continue;
 
-                if (placar.JogadorAGols == placar.JogadorBGols) continue;
+                var clasJogadorA = GetClassificaoJogador(classifs, placar.JogadorA, ref ultimaPosicao);
+                var clasJogadorB = GetClassificaoJogador(classifs, placar.JogadorB, ref ultimaPosicao);
+
+                var golsA = placar.JogadorAGols ?? 0;
+                var golsB = placar.JogadorBGols ?? 0;
+
+                clasJogadorA.Alterado = true;
+                clasJogadorB.Alterado = true;
+
+                if (golsA == golsB)
+                {
+                    AtualizarEstatistica(clasJogadorA, 0, 1, 0, golsA, golsB);
+                    AtualizarEstatistica(clasJogadorB, 0, 1, 0, golsB, golsA);
+                    continue;
+                }
+                else if (golsA > golsB)
+                {
+                    AtualizarEstatistica(clasJogadorA, 1, 0, 0, golsA, golsB);
+                    AtualizarEstatistica(clasJogadorB, 0, 0, 1, golsB, golsA);
+                }
+                else
+                {
+                    AtualizarEstatistica(clasJogadorA, 0, 0, 1, golsA, golsB);
+                    AtualizarEstatistica(clasJogadorB, 1, 0, 0, golsB, golsA);
+                }
 
                 clasJogadorA.Posicao = placar.PosicaoA;
                 clasJogadorA.PosicaoAnterior = placar.PosicaoAntA;
@@ -100,62 +143,154 @@ namespace TIFA.ViewModels
 
                 if (placar.JogadorAGols > placar.JogadorBGols)
                 {
-                    AtualizarPosicao(clas, ultimaPosicao, clasJogadorA, clasJogadorB);
+                    AtualizarPosicao(classifs, ultimaPosicao, clasJogadorA, clasJogadorB, placar.Regra);
                     continue;
-                } else
+                }
+                else
                 {
-                    AtualizarPosicao(clas, ultimaPosicao, clasJogadorB, clasJogadorA);
+                    AtualizarPosicao(classifs, ultimaPosicao, clasJogadorB, clasJogadorA, placar.Regra);
                 }
 
             }
 
-            foreach (var item in clas)
-            {
-                await DataStore.AddItemAsync(item);
-            }
-
-            await ExecuteLoadClassificacaoCommand();
+            await SalvarAlteracoesAsync(classifs);
+            await ExecuteLoadClassificacaoCommand(classifs.OrderBy(a => a.Posicao)
+                                                    .ToArray());
         }
 
-        private void AtualizarPosicao(Classificacao[] clas, int ultimaPosicao, Classificacao vencedor, Classificacao derrotado)
+        private static Classificacao GetClassificaoJogador(List<Classificacao> clas, Jogador jogador, ref int ultimaPosicao)
         {
+            var clasJogador = clas.FirstOrDefault(a => a.Jogador == jogador.Nome);
+
+            if (clasJogador == null)
+            {
+                clasJogador = new Classificacao()
+                {
+                    Jogador = jogador.Nome,
+                    Alterado = true,
+                    Posicao = (++ultimaPosicao)
+                };
+
+                clas.Add(clasJogador);
+            }
+
+            return clasJogador;
+        }
+
+        private void AtualizarEstatistica(Classificacao classificacao, int vitoria, int empate, 
+            int derrota, int golFeito, int golTomado)
+        {
+            classificacao.TotalJogos += 1;
+            classificacao.TotalVitorias = SeZeroNull((classificacao.TotalVitorias ?? 0) + vitoria);
+            classificacao.TotalDerrotas = SeZeroNull((classificacao.TotalDerrotas ?? 0) + derrota);
+            classificacao.TotalEmpates = SeZeroNull((classificacao.TotalEmpates ?? 0) + empate);
+            classificacao.TotalGolsFeitos = SeZeroNull((classificacao.TotalGolsFeitos ?? 0) + golFeito);
+            classificacao.TotalGolsTomados = SeZeroNull((classificacao.TotalGolsTomados ?? 0) + golTomado);
+        }
+
+        private void ZerarEstatistica(Classificacao classificacao)
+        {
+            classificacao.TotalJogos = 0;
+            classificacao.TotalVitorias = 0;
+            classificacao.TotalDerrotas = 0;
+            classificacao.TotalEmpates = 0;
+            classificacao.TotalGolsFeitos = 0;
+            classificacao.TotalGolsTomados = 0;
+        }
+
+        private int? SeZeroNull(int? valor)
+        {
+            if (valor == 0) return null;
+            return valor;
+        }
+
+        private async Task SalvarAlteracoesAsync(IEnumerable<Classificacao> clas)
+        {
+            foreach (var item in clas)
+            {
+                if (item.Alterado == false) continue;
+                await DataStore.AddItemAsync(item);
+                item.Alterado = false;
+            }
+        }
+
+        private void AtualizarPosicao(IEnumerable<Classificacao> clas, int ultimaPosicao, 
+            Classificacao vencedor, 
+            Classificacao derrotado, Regra regra)
+        {
+            int qtdeQueda;
+
+            switch (regra.Nome)
+            {
+                case RegrasBusiness.DESAFIO_DENTE_POR_DENTE:
+                    qtdeQueda = Math.Abs(vencedor.Posicao - derrotado.Posicao);
+                    break;
+                case RegrasBusiness.DESAFIO_LIDER:
+                    if (derrotado.Posicao == 1)
+                    {
+                        qtdeQueda = Math.Abs(vencedor.Posicao - derrotado.Posicao);
+                    } else if (vencedor.Posicao == 1)
+                    {
+                        qtdeQueda = Math.Abs(derrotado.Posicao - ultimaPosicao);
+                    }
+                    else
+                    {
+                        qtdeQueda = 1;
+                    }
+                    break;
+                //case RegrasBusiness.AMISTOSO:
+                //    qtdeQueda = 0;
+                //    break;
+                default:
+                    qtdeQueda = 1;
+                    break;
+            }
+
             if (vencedor.Posicao < derrotado.Posicao)
             {
-                Rebaixar(clas, derrotado, ultimaPosicao);
+                Rebaixar(clas, derrotado, ultimaPosicao, qtdeQueda);
             }
             else
             {
-                TrocarPosicacao(vencedor, derrotado);
+                TrocarPosicao(vencedor, derrotado);
             }
+
         }
 
-        private void Rebaixar(Classificacao[] clas, Classificacao derrotado, int ultimaPosicao)
+        private void Rebaixar(IEnumerable<Classificacao> clas, Classificacao derrotado, int ultimaPosicao, int qt = 1)
         {
 
             if (derrotado.Posicao == ultimaPosicao) return;
 
-            var clasTroca = clas.Where(a => a.Posicao == derrotado.Posicao + 1)
-                .FirstOrDefault();
-
-            if (clasTroca == null) return;
+            var promovidos = clas.Where(a => a.Posicao > derrotado.Posicao && a.Posicao <= derrotado.Posicao + qt)
+                .OrderBy(a => a.Posicao)
+                .ToArray();
 
             derrotado.PosicaoAnterior = derrotado.Posicao;
-            clasTroca.PosicaoAnterior = clasTroca.Posicao;
-            derrotado.Posicao = clasTroca.Posicao;
-            clasTroca.Posicao = derrotado.PosicaoAnterior.Value;
+            derrotado.Posicao += qt;
+            derrotado.Alterado = true;
+
+            foreach (var item in promovidos)
+            {
+                item.PosicaoAnterior = item.Posicao;
+                item.Posicao -= 1;
+                item.Alterado = true;
+            }
 
         }
 
-        private static void TrocarPosicacao(Classificacao clasJogadorA, Classificacao clasJogadorB)
+        private static void TrocarPosicao(Classificacao clasJogadorA, Classificacao clasJogadorB)
         {
             clasJogadorA.PosicaoAnterior = clasJogadorA.Posicao;
             clasJogadorA.Posicao = clasJogadorB.Posicao;
+            clasJogadorA.Alterado = true;
 
             clasJogadorB.PosicaoAnterior = clasJogadorB.Posicao;
             clasJogadorB.Posicao = clasJogadorA.PosicaoAnterior ?? 99;
+            clasJogadorB.Alterado = true;
         }
 
-        async Task ExecuteLoadClassificacaoCommand()
+        async Task ExecuteLoadClassificacaoCommand(IEnumerable<Classificacao> clas = null)
         {
             if (IsBusy)
                 return;
@@ -165,7 +300,16 @@ namespace TIFA.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                IEnumerable<Classificacao> items;
+
+                if (clas == null)
+                {
+                    items = await DataStore.GetItemsAsync(true);
+                } else
+                {
+                    items = clas;
+                }
+                
                 foreach (var item in items)
                 {
                     Items.Add(item);

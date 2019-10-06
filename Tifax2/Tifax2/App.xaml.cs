@@ -8,15 +8,19 @@ using TIFA.Models;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Xamarin.Essentials;
 
 namespace TIFA
 {
     public partial class App : Application
     {
 
+
         public App()
         {
             InitializeComponent();
+            Xamarin.Forms.DataGrid.DataGridComponent.Init();
+
 
             AppCenter.Start("android=5205bff7-d8ce-4e36-8c4b-2369d18d7516;" +
                   "uwp={Your UWP App secret here};" +
@@ -25,7 +29,7 @@ namespace TIFA
             //InitClassificacao();
             //InitJogadores();
             //InitPlacares();
-
+            
             MainPage = new MainPage();
         }
 

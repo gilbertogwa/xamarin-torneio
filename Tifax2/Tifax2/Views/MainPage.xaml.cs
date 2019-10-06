@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using TIFA.Models;
+using TIFA.Services;
 
 namespace TIFA.Views
 {
@@ -22,7 +23,10 @@ namespace TIFA.Views
             MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+
         }
+
+
 
         public async Task NavigateFromMenu(int id)
         {

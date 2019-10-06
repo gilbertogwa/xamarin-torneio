@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tifax2.Models;
 
 namespace TIFA.Models
 {
@@ -33,5 +34,7 @@ namespace TIFA.Models
         public int PosicaoB { get; set; }
         public int? PosicaoAntB { get;  set; }
         public int? PosicaoAntA { get;  set; }
+
+        public Regra Regra { get; set; }
     }
 }
