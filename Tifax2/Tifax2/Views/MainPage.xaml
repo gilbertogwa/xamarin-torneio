@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            mc:Ignorable="d"  BackgroundColor="Azure"
+            mc:Ignorable="d"  BackgroundColor="WhiteSmoke"
             xmlns:views="clr-namespace:TIFA.Views"
             x:Class="TIFA.Views.MainPage">
 
@@ -19,7 +19,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:ItemsPage />
+                <views:AboutPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

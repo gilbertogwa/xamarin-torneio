@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using System.Linq;
 using TIFA.Models;
 using TIFA.ViewModels;
+using Tifax2.Models;
 
 namespace TIFA.Views
 {
@@ -23,6 +24,12 @@ namespace TIFA.Views
             InitializeComponent();
 
             Item = new Placar();
+
+            if (Config.Current!= null)
+            {
+                Item.Regra = viewModel.Regras.FirstOrDefault(a => a.Nome == Config.Current.RegraDefault);
+            }
+            
             ViewModel = viewModel;
 
             BindingContext = this;
@@ -38,6 +45,8 @@ namespace TIFA.Views
                 await DisplayAlert("Atenção", "Todos os campos são obrigatórios", "Ok");
                 return;
             }
+
+
 
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();

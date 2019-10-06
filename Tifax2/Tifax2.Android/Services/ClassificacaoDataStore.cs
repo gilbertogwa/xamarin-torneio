@@ -18,19 +18,9 @@ using TIFA.Services;
 
 namespace TIFA.Droid.Services
 {
-    public class ClassificacaoDataStore : IDataStore<Classificacao>
+    public class ClassificacaoDataStore : DataStoreBase, IDataStore<Classificacao>
     {
 
-        private const string URL_DB = "https://gibis-tifa.firebaseio.com/";
-        private const string NAME_DB = "gibis-tifa";
-
-        private readonly FirebaseClient _database;
-
-        public ClassificacaoDataStore()
-        {
-
-            _database = new FirebaseClient(URL_DB);
-        }
 
         public async Task<bool> AddItemAsync(Classificacao item)
         {

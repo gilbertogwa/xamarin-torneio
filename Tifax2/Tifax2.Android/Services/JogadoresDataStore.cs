@@ -18,19 +18,9 @@ using TIFA.Services;
 
 namespace TIFA.Droid.Services
 {
-    public class JogadoresDataStore : IDataStore<Jogador>
+    public class JogadoresDataStore : DataStoreBase, IDataStore<Jogador>
     {
 
-        private const string URL_DB = "https://gibis-tifa.firebaseio.com/";
-        private const string NAME_DB = "gibis-tifa";
-
-        private readonly FirebaseClient _database;
-
-        public JogadoresDataStore()
-        {
-
-            _database = new FirebaseClient(URL_DB);
-        }
 
         public async Task<bool> AddItemAsync(Jogador item)
         {

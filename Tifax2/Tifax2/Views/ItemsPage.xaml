@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:models="clr-namespace:TIFA.Models"
              xmlns:util="clr-namespace:TIFA.Util"
-             mc:Ignorable="d"  BackgroundColor="Azure"
+            xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
+             mc:Ignorable="d"  BackgroundColor="WhiteSmoke"
              x:Class="TIFA.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
@@ -15,18 +16,20 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout x:Name="container">
-
-        <ListView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                VerticalOptions="FillAndExpand"
-                HasUnevenRows="true"
-                RefreshCommand="{Binding LoadItemsCommand}"
-                IsPullToRefreshEnabled="true"
-                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                CachingStrategy="RecycleElement"
-                ItemSelected="OnItemSelected">
-            <d:ListView.ItemsSource>
-                <x:Array Type="{x:Type models:Participante}">
+        <dg:DataGrid ItemsSource="{Binding Items}" SelectionEnabled="True"
+                     SelectedItem="{Binding SelectedTeam}" IsSortable="False"
+               RowHeight="30" HeaderHeight="50" BorderColor="#CCCCCC" HeaderBackground="#E0E6F8"
+                VerticalOptions="FillAndExpand" FontSize="14"
+               PullToRefreshCommand="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+            <dg:DataGrid.HeaderFontSize>
+                <OnIdiom  x:TypeArguments="x:Double">
+                    <OnIdiom.Tablet>15</OnIdiom.Tablet>
+                    <OnIdiom.Phone>13</OnIdiom.Phone>
+                </OnIdiom>
+            </dg:DataGrid.HeaderFontSize>
+            <d:dg>
+                <dg:DataGrid.ItemsSource>
+                <x:Array Type="{x:Type models:Classificacao}">
                     <models:Classificacao Posicao="1">
                         <models:Classificacao.Jogador>
                             <x:String>Jira</x:String>
@@ -35,61 +38,73 @@
                     <models:Classificacao Posicao="2">
                         <models:Classificacao.Jogador>
                             <x:String>Felipe</x:String>
-                        </models:Classificacao.Jogador>                        
+                        </models:Classificacao.Jogador>
                     </models:Classificacao>
                     <models:Classificacao Posicao="3">
                         <models:Classificacao.Jogador>
                             <x:String>Carielo</x:String>
-                        </models:Classificacao.Jogador>                        
+                        </models:Classificacao.Jogador>
                     </models:Classificacao>
                     <models:Classificacao Posicao="4">
                         <models:Classificacao.Jogador>
                             <x:String>Paulo</x:String>
-                        </models:Classificacao.Jogador>                        
+                        </models:Classificacao.Jogador>
                     </models:Classificacao>
                 </x:Array>
-            </d:ListView.ItemsSource>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
+                </dg:DataGrid.ItemsSource>
+            </d:dg>
+            <dg:DataGrid.Columns>
+                <dg:DataGridColumn Title="#" PropertyName="Posicao" Width="25"/>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="{Binding Path=Posicao, , StringFormat={x:Static util:Constantes.FMT_NUM_PARC}}"  
-                                   FontSize="20" Grid.Column="0"
-                                   TextColor="Black"
-                                   d:Text="{Binding Path=Posicao}"/>
-                            <Image WidthRequest="16"  Grid.Column="1" >
+                <dg:DataGridColumn PropertyName="TipoIcone" Width="40">
+                    <dg:DataGridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image WidthRequest="12">
                                 <Image.Style>
                                     <Style TargetType="{x:Type Image}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding TipoIcone}" Value="lider"
+                                            <DataTrigger Binding="{Binding }" Value="lider"
                                                           TargetType="Image"
                                                          >
                                                 <Setter Property="Source" Value="crown.png"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding TipoIcone}" Value="subiu" TargetType="Image">
+                                            <DataTrigger Binding="{Binding }" Value="subiu" TargetType="Image">
                                                 <Setter Property="Source" Value="sort_up_green.png"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding TipoIcone}" Value="caiu" TargetType="Image">
+                                            <DataTrigger Binding="{Binding }" Value="caiu" TargetType="Image">
                                                 <Setter Property="Source" Value="sort_down_red.png" />
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Image.Style>
-                            </Image>
-                            <Label Text="{Binding Path=Jogador}" d:Text="{Binding Path=Jogador}"
-                                LineBreakMode="NoWrap" TextColor="Black" Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="20" Grid.Column="2"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                            </Image>                            
+                        </DataTemplate>
+                    </dg:DataGridColumn.CellTemplate>
+                </dg:DataGridColumn>
+                <dg:DataGridColumn Title="Jogador" HorizontalContentAlignment="Start"
+                                   PropertyName="Jogador" />
+                <dg:DataGridColumn Title="J" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalJogos" Width="25"/>
+                <dg:DataGridColumn Title="V" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalVitorias" Width="25"/>
+                <dg:DataGridColumn Title="E" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalEmpates" Width="25"/>
+                <dg:DataGridColumn Title="D" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalDerrotas" Width="25"/>
+                <dg:DataGridColumn Title="GF" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalGolsFeitos" Width="25" />
+                <dg:DataGridColumn Title="GT" HorizontalContentAlignment="Center"
+                                   PropertyName="TotalGolsTomados" Width="25"/>
+            </dg:DataGrid.Columns>
+            <dg:DataGrid.RowsBackgroundColorPalette>
+                <dg:PaletteCollection>
+                    <Color>#F2F2F2</Color>
+                    <Color>#FFFFFF</Color>
+                </dg:PaletteCollection>
+            </dg:DataGrid.RowsBackgroundColorPalette>
+        </dg:DataGrid>
+        
+
     </StackLayout>
     
 </ContentPage>
