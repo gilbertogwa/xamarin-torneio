@@ -19,7 +19,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:AboutPage/>
+                <views:VersionVerifiyPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
