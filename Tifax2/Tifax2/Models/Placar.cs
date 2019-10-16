@@ -36,5 +36,7 @@ namespace TIFA.Models
         public int? PosicaoAntA { get;  set; }
 
         public Regra Regra { get; set; }
+
+        public string Origem { get; set; }
     }
 }

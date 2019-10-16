@@ -24,7 +24,7 @@ namespace TIFA.Views
             InitializeComponent();
 
             Item = new Placar();
-
+            Item.Origem = "app";
             if (Config.Current!= null)
             {
                 Item.Regra = viewModel.Regras.FirstOrDefault(a => a.Nome == Config.Current.RegraDefault);
