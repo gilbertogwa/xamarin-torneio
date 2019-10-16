@@ -119,21 +119,24 @@ namespace TIFA.ViewModels
                 clasJogadorA.Alterado = true;
                 clasJogadorB.Alterado = true;
 
-                if (golsA == golsB)
+                if (string.IsNullOrWhiteSpace(placar.Origem) == true || placar.Origem == "app")
                 {
-                    AtualizarEstatistica(clasJogadorA, 0, 1, 0, golsA, golsB);
-                    AtualizarEstatistica(clasJogadorB, 0, 1, 0, golsB, golsA);
-                    continue;
-                }
-                else if (golsA > golsB)
-                {
-                    AtualizarEstatistica(clasJogadorA, 1, 0, 0, golsA, golsB);
-                    AtualizarEstatistica(clasJogadorB, 0, 0, 1, golsB, golsA);
-                }
-                else
-                {
-                    AtualizarEstatistica(clasJogadorA, 0, 0, 1, golsA, golsB);
-                    AtualizarEstatistica(clasJogadorB, 1, 0, 0, golsB, golsA);
+                    if (golsA == golsB)
+                    {
+                        AtualizarEstatistica(clasJogadorA, 0, 1, 0, golsA, golsB);
+                        AtualizarEstatistica(clasJogadorB, 0, 1, 0, golsB, golsA);
+                        continue;
+                    }
+                    else if (golsA > golsB)
+                    {
+                        AtualizarEstatistica(clasJogadorA, 1, 0, 0, golsA, golsB);
+                        AtualizarEstatistica(clasJogadorB, 0, 0, 1, golsB, golsA);
+                    }
+                    else
+                    {
+                        AtualizarEstatistica(clasJogadorA, 0, 0, 1, golsA, golsB);
+                        AtualizarEstatistica(clasJogadorB, 1, 0, 0, golsB, golsA);
+                    }
                 }
 
                 clasJogadorA.Posicao = placar.PosicaoA;
