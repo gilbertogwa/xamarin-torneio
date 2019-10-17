@@ -45,48 +45,47 @@ namespace TIFA.ViewModels
             LoadItemsCommand = new Command(async () =>
             {
                 await ExecuteLoadJogadoresCommand();
-                await ExecuteLoadClassificacaoCommand();                
+                await ExecuteLoadClassificacaoCommand();
             });
 
-            MessagingCenter.Subscribe<NewItemPage, Placar>(this, "AddItem", async (obj, item) =>
-            {
-
-                var clas = ((await DataStore.GetItemsAsync(true)) ?? new Classificacao[0])
-                    .OrderBy(a => a.Posicao)
-                    .ToArray();
-
-
-                var novoPlacar = item as Placar;
-
-                var clasJA = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorA.Nome);
-                var clasJB = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorB.Nome);
-
-                //if (novoPlacar.Regra.Nome == RegrasBusiness.AMISTOSO)
-                //{
-                //    await PlacarDataStore.AddItemAsync(novoPlacar);
-                //    return;
-                //}
-
-                var ultimaPosicao = clas[clas.Length - 1].Posicao;
-
-                novoPlacar.PosicaoA = (clasJA?.Posicao) ?? (++ultimaPosicao);
-                novoPlacar.PosicaoAntA = (clasJA?.PosicaoAnterior) ;
-                novoPlacar.PosicaoB = (clasJB?.Posicao) ?? (++ultimaPosicao);
-                novoPlacar.PosicaoAntB = (clasJB?.PosicaoAnterior);
-
-                await PlacarDataStore.AddItemAsync(novoPlacar);
-
-                RecalcularClassificacaoAsync(null);
-
-            });
+            MessagingCenter.Subscribe<NewItemPage, Placar>(this, "AddItem", IncluirPlacar);
 
         }
 
-        public async void RecalcularClassificacaoAsync(Classificacao[] clas = null)
+        private async void IncluirPlacar(NewItemPage source, Placar placar)
         {
 
-            var classifs = new List<Classificacao>();
+            var clas = ((await DataStore.GetItemsAsync(true)) ?? new Classificacao[0])
+                .OrderBy(a => a.Posicao)
+                .ToArray();
 
+
+            var novoPlacar = placar as Placar;
+
+            var clasJA = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorA.Nome);
+            var clasJB = clas.FirstOrDefault(a => a.Jogador == novoPlacar.JogadorB.Nome);
+
+            //if (novoPlacar.Regra.Nome == RegrasBusiness.AMISTOSO)
+            //{
+            //    await PlacarDataStore.AddItemAsync(novoPlacar);
+            //    return;
+            //}
+
+            var ultimaPosicao = clas[clas.Length - 1].Posicao;
+
+            novoPlacar.PosicaoA = (clasJA?.Posicao) ?? (++ultimaPosicao);
+            novoPlacar.PosicaoAntA = (clasJA?.PosicaoAnterior);
+            novoPlacar.PosicaoB = (clasJB?.Posicao) ?? (++ultimaPosicao);
+            novoPlacar.PosicaoAntB = (clasJB?.PosicaoAnterior);
+
+            await PlacarDataStore.AddItemAsync(novoPlacar);
+
+            RecalcularClassificacaoAsync(null);
+
+
+        }
+        public async void RecalcularClassificacaoAsync(Classificacao[] clas = null)
+        {
             if (clas == null)
             {
                 clas = (await ClassificacaoInicialStore.GetItemsAsync())
@@ -95,11 +94,23 @@ namespace TIFA.ViewModels
                     .ToArray();
             }
 
+            var placares = (await PlacarDataStore.GetItemsAsync(true)).ToArray();
+
+            var classifs = RecalcularClassificacaoInternal(clas, placares);
+            await SalvarAlteracoesAsync(classifs);
+            await ExecuteLoadClassificacaoCommand(classifs.OrderBy(a => a.Posicao)
+                                                    .ToArray());
+        }
+
+        private IEnumerable<Classificacao> RecalcularClassificacaoInternal(Classificacao[] clas, Placar[] placares)
+        {
+
+            var classifs = new List<Classificacao>();
+
             classifs.AddRange(clas);
 
-            var ultimaPosicao = clas[clas.Length - 1].Posicao;
-            var placares = (await PlacarDataStore.GetItemsAsync(true)).ToArray();
-            var dataMaisAntiga = clas.Select(a => a.Data).OrderBy(a => a).First();
+            var ultimaPosicao = classifs[classifs.Count - 1].Posicao;
+            var dataMaisAntiga = classifs.Select(a => a.Data).OrderBy(a => a).First();
 
             placares = placares.Where(a => a.Data >= dataMaisAntiga)
                 .OrderBy(a => a.DataPublicacao)
@@ -108,10 +119,12 @@ namespace TIFA.ViewModels
             foreach (var placar in placares)
             {
 
+                Console.WriteLine(string.Join("\r\n", classifs.OrderBy(a => a.Posicao).Select(a => a.Posicao + " -> " + a.Jogador)));
+
                 if (placar.JogadorAGols == null || placar.JogadorBGols == null) continue;
 
                 var clasJogadorA = GetClassificaoJogador(classifs, placar.JogadorA, ref ultimaPosicao);
-                var clasJogadorB = GetClassificaoJogador(classifs, placar.JogadorB, ref ultimaPosicao);
+                var clasJogadorB = GetClassificaoJogador(classifs, placar.JogadorB, ref ultimaPosicao);                
 
                 var golsA = placar.JogadorAGols ?? 0;
                 var golsB = placar.JogadorBGols ?? 0;
@@ -138,7 +151,7 @@ namespace TIFA.ViewModels
                         AtualizarEstatistica(clasJogadorB, 1, 0, 0, golsB, golsA);
                     }
                 }
-
+                
                 clasJogadorA.Posicao = placar.PosicaoA;
                 clasJogadorA.PosicaoAnterior = placar.PosicaoAntA;
                 clasJogadorB.Posicao = placar.PosicaoB;
@@ -156,9 +169,8 @@ namespace TIFA.ViewModels
 
             }
 
-            await SalvarAlteracoesAsync(classifs);
-            await ExecuteLoadClassificacaoCommand(classifs.OrderBy(a => a.Posicao)
-                                                    .ToArray());
+            return classifs;
+
         }
 
         private static Classificacao GetClassificaoJogador(List<Classificacao> clas, Jogador jogador, ref int ultimaPosicao)

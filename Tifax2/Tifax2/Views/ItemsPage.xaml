@@ -68,6 +68,9 @@
                                                          >
                                                 <Setter Property="Source" Value="crown.png"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding }" Value="igual" TargetType="Image">
+                                                <Setter Property="Source" Value=""/>
+                                            </DataTrigger>                                            
                                             <DataTrigger Binding="{Binding }" Value="subiu" TargetType="Image">
                                                 <Setter Property="Source" Value="sort_up_green.png"/>
                                             </DataTrigger>

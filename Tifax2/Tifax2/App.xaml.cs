@@ -9,6 +9,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Essentials;
+using Microsoft.AppCenter.Distribute;
 
 namespace TIFA
 {
@@ -21,11 +22,6 @@ namespace TIFA
             InitializeComponent();
             Xamarin.Forms.DataGrid.DataGridComponent.Init();
 
-
-            AppCenter.Start("android=5205bff7-d8ce-4e36-8c4b-2369d18d7516;" +
-                  "uwp={Your UWP App secret here};" +
-                  "ios={Your iOS App secret here}",
-                  typeof(Analytics), typeof(Crashes));
             //InitClassificacao();
             //InitJogadores();
             //InitPlacares();
@@ -127,7 +123,9 @@ namespace TIFA
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            AppCenter.Start("android=5205bff7-d8ce-4e36-8c4b-2369d18d7516;",
+                  typeof(Analytics), typeof(Crashes), typeof(Distribute));
+            
         }
 
         protected override void OnSleep()

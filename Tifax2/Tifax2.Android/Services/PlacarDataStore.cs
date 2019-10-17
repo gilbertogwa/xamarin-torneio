@@ -54,7 +54,18 @@ namespace TIFA.Droid.Services
 
         public async Task<IEnumerable<Placar>> GetItemsAsync(bool forceRefresh = false)
         {
-            var response = await _database.Child("placares").OnceSingleAsync<Dictionary<string, Placar>>();
+            Dictionary<string, Placar> response;
+
+            try
+            {
+                response = await _database.Child("placares").OnceSingleAsync<Dictionary<string, Placar>>();
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+                throw;
+            }
+            
 
             var itens = response.Where(a => a.Key != null)
                 .Select(a => a.Value)
