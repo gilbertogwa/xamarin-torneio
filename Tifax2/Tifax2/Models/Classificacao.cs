@@ -56,7 +56,7 @@ namespace TIFA.Models
 
                 if (EhTendenciaAlta == false) return "caiu";
 
-                return "";
+                return "igual";
 
             }
         }

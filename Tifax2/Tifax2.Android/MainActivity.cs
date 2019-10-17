@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
 using TIFA.Droid.Services;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Distribute;
 
 namespace TIFA.Droid
 {
@@ -26,6 +28,9 @@ namespace TIFA.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            Distribute.SetEnabledForDebuggableBuild(true);
+
 
             LoadApplication(new App());
 
