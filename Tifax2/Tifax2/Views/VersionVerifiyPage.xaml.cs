@@ -15,7 +15,7 @@ namespace TIFA.Views
     public partial class VersionVerifiyPage : ContentPage
     {
 
-        public const string VERSAO_DATABASE = "6";
+        public const string VERSAO_DATABASE = "7";
 
         public VersionVerifiyPage()
         {
@@ -26,6 +26,11 @@ namespace TIFA.Views
         {
             await VerificarVersaoAsync();
             base.OnAppearing();
+
+            Plugin.PushNotification.CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
+            {
+                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+            };
         }
 
         public async Task VerificarVersaoAsync()
