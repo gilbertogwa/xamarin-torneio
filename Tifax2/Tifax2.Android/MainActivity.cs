@@ -10,7 +10,7 @@ using Xamarin.Forms;
 using TIFA.Droid.Services;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Distribute;
-using Plugin.PushNotification;
+//using Plugin.PushNotification;
 using Android.Content;
 
 namespace TIFA.Droid
@@ -35,7 +35,7 @@ namespace TIFA.Droid
 
 
             LoadApplication(new App());
-            PushNotificationManager.ProcessIntent(this, Intent);
+            //PushNotificationManager.ProcessIntent(this, Intent);
         }
 
         private void RegisterDI()
@@ -48,11 +48,11 @@ namespace TIFA.Droid
         }
 
 
-        protected override void OnNewIntent(Intent intent)
-        {
-            base.OnNewIntent(intent);
-            PushNotificationManager.ProcessIntent(this, intent);
-        }
+        //protected override void OnNewIntent(Intent intent)
+        //{
+        //    base.OnNewIntent(intent);
+        //    PushNotificationManager.ProcessIntent(this, intent);
+        //}
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

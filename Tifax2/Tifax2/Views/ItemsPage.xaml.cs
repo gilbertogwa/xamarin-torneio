@@ -33,14 +33,15 @@ namespace TIFA.Views
                
             };
 
-            button.Clicked += async (a, b) =>
+            button.Clicked += (a, b) =>
             {
-                await Plugin.PushNotification.CrossPushNotification.Current.RegisterForPushNotifications();
-                var x = Plugin.PushNotification.CrossPushNotification.Current.Token;
+
+                 viewModel.RecalcularClassificacaoAsync();
+                //await Plugin.PushNotification.CrossPushNotification.Current.RegisterForPushNotifications();
+                //var x = Plugin.PushNotification.CrossPushNotification.Current.Token;
             };
             
-            
-          //  viewModel.RecalcularClassificacaoAsync();
+
             container.Children.Insert(0, button);
 #endif
         }
