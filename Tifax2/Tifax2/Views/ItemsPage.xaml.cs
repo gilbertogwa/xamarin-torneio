@@ -18,7 +18,7 @@ namespace TIFA.Views
     [DesignTimeVisible(false)]
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        readonly ItemsViewModel viewModel;
 
         public ItemsPage()
         {
@@ -33,7 +33,14 @@ namespace TIFA.Views
                
             };
 
-            button.Clicked += (a, b) => viewModel.RecalcularClassificacaoAsync();
+            button.Clicked += async (a, b) =>
+            {
+                await Plugin.PushNotification.CrossPushNotification.Current.RegisterForPushNotifications();
+                var x = Plugin.PushNotification.CrossPushNotification.Current.Token;
+            };
+            
+            
+          //  viewModel.RecalcularClassificacaoAsync();
             container.Children.Insert(0, button);
 #endif
         }
@@ -42,8 +49,7 @@ namespace TIFA.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
+            if (!(args.SelectedItem is Item item))
                 return;
 
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
@@ -70,6 +76,7 @@ namespace TIFA.Views
             {
                 Navigation.RemovePage(p);
             }
+
         }
 
         private void ColumnDefinition_SizeChanged(object sender, EventArgs e)
