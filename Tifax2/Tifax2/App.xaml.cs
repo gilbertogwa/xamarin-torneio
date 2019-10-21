@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using TIFA.Models;
 using Microsoft.AppCenter;
 using Xamarin.Essentials;
-using Plugin.PushNotification;
+//using Plugin.PushNotification;
 
 namespace TIFA
 {
@@ -30,28 +30,28 @@ namespace TIFA
             Xamarin.Forms.DataGrid.DataGridComponent.Init();           
             MainPage = new MainPage();
 
-            CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
-            {
-                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
-            };
+            //CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
+            //{
+            //    System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+            //};
 
-            CrossPushNotification.Current.OnNotificationReceived += (s, p) =>
-            {
+            //CrossPushNotification.Current.OnNotificationReceived += (s, p) =>
+            //{
 
-                System.Diagnostics.Debug.WriteLine("Received");
+            //    System.Diagnostics.Debug.WriteLine("Received");
 
-            };
+            //};
 
-            CrossPushNotification.Current.OnNotificationOpened += (s, p) =>
-            {
-                System.Diagnostics.Debug.WriteLine("Opened");
-                foreach (var data in p.Data)
-                {
-                    System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
-                }
+            //CrossPushNotification.Current.OnNotificationOpened += (s, p) =>
+            //{
+            //    System.Diagnostics.Debug.WriteLine("Opened");
+            //    foreach (var data in p.Data)
+            //    {
+            //        System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
+            //    }
 
 
-            };
+            //};
 
         }
 

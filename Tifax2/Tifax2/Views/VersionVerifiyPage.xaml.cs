@@ -27,10 +27,10 @@ namespace TIFA.Views
             await VerificarVersaoAsync();
             base.OnAppearing();
 
-            Plugin.PushNotification.CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
-            {
-                System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
-            };
+            //Plugin.PushNotification.CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
+            //{
+            //    System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+            //};
         }
 
         public async Task VerificarVersaoAsync()
