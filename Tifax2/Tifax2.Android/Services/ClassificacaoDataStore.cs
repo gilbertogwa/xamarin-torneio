@@ -40,7 +40,7 @@ namespace TIFA.Droid.Services
             var dic = classificao.ToDictionary(a => a.Jogador);
             var json = JsonConvert.SerializeObject(dic);
 
-            await db.PutAsync(json);
+            await db.PostAsync(json);
 
             return await Task.FromResult(true);
         }
