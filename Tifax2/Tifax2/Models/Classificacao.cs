@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TIFA.Util;
 
 namespace TIFA.Models
 {
 
-    public class Classificacao
+    public class Classificacao: IPosicaoChave
     {
 
         public Classificacao()
@@ -20,6 +21,22 @@ namespace TIFA.Models
 
         public string Jogador { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Classificacao jogador)) return false;
+
+            return (jogador.Jogador == Jogador);
+        }
+
+        public override int GetHashCode()
+        {
+            return 1156687923 + EqualityComparer<string>.Default.GetHashCode(Jogador);
+        }
+
+        public string GetKey()
+        {
+            return Jogador;
+        }
 
         public int? PosicaoAnterior { get; set; }
 
@@ -63,7 +80,12 @@ namespace TIFA.Models
 
         [JsonIgnore]
         public bool Alterado { get; set; }
+
         public int TotalJogos { get; set; }
+
+        [JsonIgnore]
+        public bool Excluir { get; set; }
+
     }
 
 }

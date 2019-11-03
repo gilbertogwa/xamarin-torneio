@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            BackgroundColor="AliceBlue"
+             x:Class="TIFA.Views.IdentityPage"
+             xmlns:vm="clr-namespace:TIFA.ViewModels"
+             Title="{Binding Title}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Text="Quem é Você?" FontSize="Large" 
+              TextColor="Black" Margin="0,20,0,0"
+               HorizontalTextAlignment="Center"  />
+        <Picker Grid.Row="1" ItemsSource="{Binding Jogadores}" 
+                             x:Name="cboJogadores"
+                            ItemDisplayBinding="{Binding Nome}" Margin="0,10,0,0"
+                SelectedIndexChanged="cboJogadores_SelectedIndexChanged"
+                FontSize="Large"
+                ></Picker>
+
+        <Label Grid.Row="2"
+               TextColor="OrangeRed"
+               Text="Está certo disso?" FontSize="Large" 
+              Margin="0,10,0,10" x:Name="lblFrase"
+               HorizontalTextAlignment="Center" />
+
+        
+        <Button Grid.Row="3" HeightRequest="60"  
+                BackgroundColor="CadetBlue"
+                TextColor="White"
+                Margin="10"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                x:Name="btnConfirmar" Text="Acho que sim..."
+                Clicked="Button_Clicked"/>
+
+
+        
+    </Grid>
+</ContentPage>

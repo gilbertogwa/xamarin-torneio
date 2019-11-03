@@ -1,0 +1,57 @@
+[
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Bahia",
+    "Posicao" : 5
+  },
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Cabo",
+    "Posicao" : 7
+  },
+ {
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Carielli",
+    "Posicao" : 3
+  },
+ {
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Felipe",
+    "Posicao" : 2
+  },
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Gustavo",
+    "Posicao" : 9
+  },
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Jira",
+    "Posicao" : 1
+  },
+ {
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Joazinho",
+    "Posicao" : 10
+  },
+ {
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Juiz",
+    "Posicao" : 11
+  },
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Little",
+    "Posicao" : 8
+  },
+{
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Neto",
+    "Posicao" : 6
+  },
+ {
+    "Data" : "2019-09-20T00:00:00-03:00",
+    "Jogador" : "Érico",
+    "Posicao" : 4
+  }
+]

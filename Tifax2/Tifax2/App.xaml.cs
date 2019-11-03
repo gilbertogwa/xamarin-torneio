@@ -20,8 +20,10 @@ namespace TIFA
         {
             services.Add(typeof(Microsoft.AppCenter.Analytics.Analytics));
             services.Add(typeof(Microsoft.AppCenter.Crashes.Crashes));
-            services.Add(typeof(Microsoft.AppCenter.Distribute.Distribute));
 
+#if RELEASE
+            services.Add(typeof(Microsoft.AppCenter.Distribute.Distribute));
+#endif
         }
 
         public App()

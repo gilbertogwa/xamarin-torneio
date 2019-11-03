@@ -33,9 +33,8 @@ namespace TIFA.Droid
 
             Distribute.SetEnabledForDebuggableBuild(true);
 
-
             LoadApplication(new App());
-            //PushNotificationManager.ProcessIntent(this, Intent);
+
         }
 
         private void RegisterDI()
@@ -46,13 +45,6 @@ namespace TIFA.Droid
             DependencyService.Register<ClassificacaoInicialDataStore>();
             DependencyService.Register<ConfigDataStore>();
         }
-
-
-        //protected override void OnNewIntent(Intent intent)
-        //{
-        //    base.OnNewIntent(intent);
-        //    PushNotificationManager.ProcessIntent(this, intent);
-        //}
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

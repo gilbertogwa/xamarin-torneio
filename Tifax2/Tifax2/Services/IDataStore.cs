@@ -18,7 +18,9 @@ namespace TIFA.Services
         Task<bool> UpdateItemAsync(T item);
         Task<bool> DeleteItemAsync(string id);
         Task<T> GetItemAsync(string id);
-        
+
+        Task<bool> SaveAll(IEnumerable<T> items);
+
         void Listen(ObservableCollection<T> jogadores);
     }
 

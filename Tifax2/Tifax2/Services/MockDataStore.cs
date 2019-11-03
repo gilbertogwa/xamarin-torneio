@@ -67,5 +67,40 @@ namespace TIFA.Services
         {
             throw new NotImplementedException();
         }
+
+        Task<bool> IDataStore<Classificacao>.AddItemAsync(Classificacao item)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<bool> IDataStore<Classificacao>.UpdateItemAsync(Classificacao item)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<bool> IDataStore<Classificacao>.DeleteItemAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Classificacao> IDataStore<Classificacao>.GetItemAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<bool> IDataStore<Classificacao>.SaveAll(IEnumerable<Classificacao> items)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IDataStore<Classificacao>.Listen(ObservableCollection<Classificacao> jogadores)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Classificacao>> IDataStoreList<Classificacao>.GetItemsAsync(bool forceRefresh)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
