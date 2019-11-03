@@ -15,7 +15,7 @@ namespace TIFA.Views
     public partial class VersionVerifiyPage : ContentPage
     {
 
-        public const string VERSAO_DATABASE = "7";
+        public const string VERSAO_DATABASE = "8";
 
         public VersionVerifiyPage()
         {
@@ -48,7 +48,16 @@ namespace TIFA.Views
 
             Config.Current = config;
 
-            await Navigation.PushAsync(new ItemsPage());
+            var user = await SecureStorage.GetAsync("user");
+
+            if (string.IsNullOrWhiteSpace(user) == true)
+            {
+                await Navigation.PushAsync(new IdentityPage());
+            } else
+            {
+                await Navigation.PushAsync(new ItemsPage());
+            }
+            
         }
 
     }

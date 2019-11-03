@@ -51,6 +51,11 @@ namespace TIFA.Droid.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> SaveAll(IEnumerable<Config> items)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> UpdateItemAsync(Config item)
         {
             throw new NotImplementedException();

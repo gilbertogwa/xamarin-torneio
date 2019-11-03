@@ -6,13 +6,17 @@ using Tifax2.Models;
 
 namespace Tifax2.Models
 {
-    class RegrasBusiness
+    public class RegrasBusiness
     {
 
         public const string PADRAO = "DesafioPadrão";
         public const string DESAFIO_LIDER = "DesafioDoLíder";
         public const string DESAFIO_DENTE_POR_DENTE = "DesafioDentePorDente";
-        //public const string AMISTOSO = "Amistoso";
+
+        /// <summary>
+        /// Usado para tirar o jogador do campeonato
+        /// </summary>
+        public const string ESTOU_FORA = "Estou_Fora_!_Desisto!";
 
         public static IEnumerable<Regra> GetList()
         {
@@ -22,7 +26,7 @@ namespace Tifax2.Models
                 Create(PADRAO, "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda"),
                 Create(DESAFIO_LIDER, "VITÓRIA DO INFERIOR: Ganhe a posição do líder \nDERROTA DO INFERIOR: Você é um lixo! Vá para última posição \nEMPATE: Você merece ser líder?"),
                 Create(DESAFIO_DENTE_POR_DENTE, "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?"),
-                //Create(AMISTOSO, "Assim é fácil, não tem pressão."),
+                Create(ESTOU_FORA, "Eu desisto! Essa vida não é pra mim, me tirem daqui!!!")
             };
 
             return regras;

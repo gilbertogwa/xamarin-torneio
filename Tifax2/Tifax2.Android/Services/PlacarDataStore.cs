@@ -79,6 +79,11 @@ namespace TIFA.Droid.Services
         {
         }
 
+        public Task<bool> SaveAll(IEnumerable<Placar> items)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> UpdateItemAsync(Placar item)
         {
             return await Task.FromResult(true);

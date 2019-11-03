@@ -60,5 +60,10 @@ namespace TIFA.Services
         {
             throw new NotImplementedException();
         }
+
+        public Task<bool> SaveAll(IEnumerable<Jogador> items)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

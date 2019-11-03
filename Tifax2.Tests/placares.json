@@ -1,0 +1,1454 @@
+[
+{
+    "Data" : "2019-10-13T00:00:01.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:01.000Z",
+    "JogadorA" : {
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Carielli"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 3,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 1,
+    "PosicaoB" : 1,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-13T00:00:02.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:02.000Z",
+    "JogadorA" : {
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 2,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 3,
+    "PosicaoB" : 1,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-13T00:00:06.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:06.000Z",
+    "JogadorA" : {
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Joazinho"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-13T00:00:08.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:08.000Z",
+    "JogadorA" : {
+      "Nome" : "Little"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Gustavo"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 7,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-13T00:00:10.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:10.000Z",
+    "JogadorA" : {
+      "Nome" : "Neto"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 11,
+    "PosicaoAntA" : 11,
+    "PosicaoAntB" : 9,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-13T00:00:11.000Z",
+    "DataPublicacao" : "2019-10-13T00:00:11.000Z",
+    "JogadorA" : {
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Neto"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 11,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-20T00:00:02.000Z",
+    "DataPublicacao" : "2019-10-20T00:00:02.000Z",
+    "JogadorA" : {
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 3,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 2,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-20T00:00:04.000Z",
+    "DataPublicacao" : "2019-10-20T00:00:04.000Z",
+    "JogadorA" : {
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Joazinho"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-20T00:00:06.000Z",
+    "DataPublicacao" : "2019-10-20T00:00:06.000Z",
+    "JogadorA" : {
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 7,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-27T00:00:07.000Z",
+    "DataPublicacao" : "2019-10-27T00:00:07.000Z",
+    "JogadorA" : {
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Neto"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 7,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-27T00:00:10.000Z",
+    "DataPublicacao" : "2019-10-27T00:00:10.000Z",
+    "JogadorA" : {
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "",
+    "Origem" : "rebaixamento-auto",
+    "PosicaoA" : 11,
+    "PosicaoAntA" : 11,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 10,
+    "Regra" : {
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T19:24:29.593813-03:00",
+    "Id" : "cc63e215-5a4a-4314-9bf6-08a070439e0e",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 3,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T21:33:49.387109-03:00",
+    "Id" : "b6f65a2a-6d5d-4e20-9ba9-d8ef14c26b0b",
+    "JogadorA" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 9,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T20:12:51.872656-03:00",
+    "Id" : "8b3484f2-50f0-498b-a57c-c8bd0af2316b",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T20:29:56.668695-03:00",
+    "Id" : "eb2dafe3-4651-4750-a569-65f4ba5c2a7c",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T19:40:19.226948-03:00",
+    "Id" : "9f553a74-5c4e-4844-8aa0-6026f0fcdb8d",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 3,
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 2,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T19:08:18.721396-03:00",
+    "Id" : "a56a80af-3466-4838-9fe3-3efc592f0f0a",
+    "JogadorA" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorBGols" : 3,
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 9,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-24T19:56:15.627464-03:00",
+    "Id" : "bc5e56f2-09c3-4b8b-9f1c-950fcbcddacc",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 2,
+    "PosicaoAntA" : 1,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-25T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-25T19:04:49.924949-03:00",
+    "Id" : "70d5dde7-b70f-4491-bca9-6a78025b228a",
+    "JogadorA" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-26T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-26T19:43:22.164112-03:00",
+    "Id" : "28088331-e273-4ef3-9207-2fc428d4c66d",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 9,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-26T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-26T12:29:11.215887-03:00",
+    "Id" : "0e4d1a66-00a7-4809-9e22-f96891602718",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-26T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-26T18:57:18.814487-03:00",
+    "Id" : "3337de24-ab52-4a1b-a672-45369807f6fe",
+    "JogadorA" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T12:36:12.88833-03:00",
+    "Id" : "f7866af0-3a18-40c8-940e-a23ef992d421",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 9,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T12:56:20.524253-03:00",
+    "Id" : "3609104c-a35d-4535-bb0b-9450dc5817d1",
+    "JogadorA" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 4,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 7,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T13:27:59.542114-03:00",
+    "Id" : "b7e1e8cb-2f0c-4de7-973f-ce08441b16fe",
+    "JogadorA" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 9,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T19:45:29.144198-03:00",
+    "Id" : "e6ab104f-ef8a-48f4-acf3-460379611b44",
+    "JogadorA" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 5,
+    "PosicaoB" : 3,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T19:45:49.007518-03:00",
+    "Id" : "697e4af1-808a-4e0e-b462-239a0479ea82",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 3,
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-09-27T00:00:00-03:00",
+    "DataPublicacao" : "2019-09-27T19:44:59.84341-03:00",
+    "Id" : "f2c8ad1e-a895-4447-8e7c-091df1e24015",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 1,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-01T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-01T19:14:17.832935-03:00",
+    "Id" : "1d1b4993-2b98-4b86-a24e-7de5daf816b7",
+    "JogadorA" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-02T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-02T20:14:07.379316-03:00",
+    "Id" : "13007ca0-d528-4f13-ae6e-54af765db4be",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 9,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 7,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-02T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-02T20:36:07.32203-03:00",
+    "Id" : "31198597-9f5f-4e33-91f3-e8ccbadabd41",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 7,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-02T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-02T12:41:06.548663-03:00",
+    "Id" : "63e92566-364b-45cf-a87c-53f6c737c6d2",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 1,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-02T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-02T20:52:41.461673-03:00",
+    "Id" : "483b62f3-2f05-48c9-87fd-e1a47a736d9c",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 3,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 2,
+    "PosicaoB" : 1,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-03T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-03T13:12:06.865484-03:00",
+    "Id" : "c2aff596-50af-4b91-bfe9-6c4085be0d21",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 7,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-03T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-03T13:22:13.624769-03:00",
+    "Id" : "a52eab2b-7319-4b1f-a9a8-85c9cc5bb991",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 7,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-03T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-03T12:52:11.215088-03:00",
+    "Id" : "b19c1b61-6022-44e8-b1f4-a415b5f4c44f",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 4,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-03T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-03T13:23:21.62452-03:00",
+    "Id" : "35f86a61-d5f6-42d4-957f-e9db7a50562b",
+    "JogadorA" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 9,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 9,
+    "PosicaoB" : 10,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-04T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-04T18:56:34.491593-03:00",
+    "Id" : "3592c006-ef91-4ff7-899a-e121b94639d1",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 7,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-04T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-04T18:26:57.169932-03:00",
+    "Id" : "5602a498-e53d-4b1f-b9b6-dca42a02d744",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-04T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-04T12:58:21.535649-03:00",
+    "Id" : "c75db059-66b9-4313-96a0-f007b54caba3",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 4,
+    "PosicaoAntB" : 3,
+    "PosicaoB" : 1,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-04T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-04T18:25:41.678877-03:00",
+    "Id" : "d7ad679a-0a4d-4a37-aa93-e85e3572e8fc",
+    "JogadorA" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "6",
+      "Nome" : "Neto"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 9,
+    "PosicaoAntB" : 11,
+    "PosicaoB" : 11,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Perca uma posição \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Desafio de merda",
+      "Nome" : "DesafioPadrão"
+    }
+  },
+{
+    "Data" : "2019-10-09T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-09T19:16:09.164687-03:00",
+    "Id" : "61610038-f7ac-4c28-8d4a-37b8c14cdf77",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "6",
+      "Nome" : "Neto"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 10,
+    "PosicaoB" : 9,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-10T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-10T18:44:58.576262-03:00",
+    "Id" : "59666088-f0c9-4c47-bcbf-a55cb78c18a0",
+    "JogadorA" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 4,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-10T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-10T20:12:45.789532-03:00",
+    "Id" : "5558ca9d-2d83-4c69-83a5-32c00a38bfb3",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 9,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-10T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-10T19:18:51.292359-03:00",
+    "Id" : "2315c225-438c-4426-8e41-befdf609d9fa",
+    "JogadorA" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 4,
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 1,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-10T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-10T19:36:18.259982-03:00",
+    "Id" : "e07750ae-062c-4cba-a9ab-6ee083f8a315",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 2,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 1,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 7,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-10T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-10T19:56:44.158138-03:00",
+    "Id" : "b7ada318-ba6a-4c58-8e39-8e6fa5fe5a0b",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 3,
+    "PosicaoAntA" : 1,
+    "PosicaoAntB" : 3,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-11T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-11T18:38:10.090993-03:00",
+    "Id" : "de4391b6-d792-4d91-a248-d61cf6cd0aca",
+    "JogadorA" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 4,
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 6,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-11T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-11T18:24:37.818185-03:00",
+    "Id" : "14083554-2553-4b1b-a685-946be50925a2",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 5,
+    "JogadorB" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorBGols" : 0,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 1,
+    "PosicaoAntB" : 2,
+    "PosicaoB" : 3,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-11T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-11T19:06:42.70933-03:00",
+    "Id" : "ea3dcbc0-4d84-40b2-8ac3-ae73b64ccfe4",
+    "JogadorA" : {
+      "Id" : "10",
+      "Nome" : "Joazinho"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "6",
+      "Nome" : "Neto"
+    },
+    "JogadorBGols" : 1,
+    "PosicaoA" : 5,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 9,
+    "PosicaoB" : 11,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-14T00:00:00",
+    "DataPublicacao" : "2019-10-17T12:33:34.760749-03:00",
+    "Id" : "c26ac451-dc48-483d-9530-13b7b2eda416",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "Érico",
+    "Origem" : "app",
+    "PosicaoA" : 2,
+    "PosicaoAntA" : 1,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-16T00:00:00",
+    "DataPublicacao" : "2019-10-17T12:34:32.315439-03:00",
+    "Id" : "86d6ed84-00cc-401a-bcca-61218f9be855",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 2,
+    "NomeDesafiante" : "Carielli",
+    "Origem" : "app",
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 9,
+    "PosicaoB" : 11,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Ganhe a posição do líder \nDERROTA DO INFERIOR: Você é um lixo! Vá para última posição \nEMPATE: Você merece ser líder?",
+      "Nome" : "DesafioDoLíder"
+    }
+  },
+{
+    "Data" : "2019-10-16T00:00:00",
+    "DataPublicacao" : "2019-10-17T12:32:19.504908-03:00",
+    "Id" : "fa4d239e-ebf5-4f75-9886-a755a3140df7",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorBGols" : 5,
+    "NomeDesafiante" : "Jira",
+    "Origem" : "app",
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 1,
+    "PosicaoB" : 3,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Ganhe a posição do líder \nDERROTA DO INFERIOR: Você é um lixo! Vá para última posição \nEMPATE: Você merece ser líder?",
+      "Nome" : "DesafioDoLíder"
+    }
+  },
+{
+    "Data" : "2019-10-17T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-17T12:35:07.095639-03:00",
+    "Id" : "08ca49f3-b250-4d15-b7a8-38b2cb1644be",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "7",
+      "Nome" : "Cabo"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "Carielli",
+    "Origem" : "app",
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Ganhe a posição do líder \nDERROTA DO INFERIOR: Você é um lixo! Vá para última posição \nEMPATE: Você merece ser líder?",
+      "Nome" : "DesafioDoLíder"
+    }
+  },
+{
+    "Data" : "2019-10-17T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-17T21:23:55.665588-03:00",
+    "Id" : "f0ada097-2102-4a6f-a60f-1b0bd5408944",
+    "JogadorA" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 1,
+    "NomeDesafiante" : "Gustavo",
+    "Origem" : "app",
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 6,
+    "PosicaoB" : 5,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-21T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-21T20:24:08.551361-03:00",
+    "Id" : "0ef5d687-7fdf-4083-b6b7-7489880b0a41",
+    "JogadorA" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "5",
+      "Nome" : "Bahia"
+    },
+    "JogadorBGols" : 0,
+    "NomeDesafiante" : "Juiz",
+    "Origem" : "app",
+    "PosicaoA" : 10,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 8,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-22T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-22T14:04:03.789671-03:00",
+    "Id" : "1168f39c-d952-429a-a110-c4c77167c277",
+    "JogadorA" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorBGols" : 1,
+    "NomeDesafiante" : "Juiz",
+    "Origem" : "app",
+    "PosicaoA" : 8,
+    "PosicaoAntA" : 10,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-24T19:28:13.044006-03:00",
+    "Id" : "25b204f3-4532-4153-a618-c0705547f6cf",
+    "JogadorA" : {
+      "Id" : "3",
+      "Nome" : "Carielli"
+    },
+    "JogadorAGols" : 0,
+    "JogadorB" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorBGols" : 2,
+    "NomeDesafiante" : "Carielli",
+    "Origem" : "app",
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 2,
+    "PosicaoB" : 3,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-24T20:51:37.276939-03:00",
+    "Id" : "d727c2a7-8885-4147-8a0b-b370cb2894e9",
+    "JogadorA" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorBGols" : 2,
+    "NomeDesafiante" : "Juiz",
+    "Origem" : "app",
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 2,
+    "PosicaoAntB" : 8,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-24T20:19:58.11986-03:00",
+    "Id" : "cc8ccc3d-5132-48ec-8f19-d376ea7f0d1d",
+    "JogadorA" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorAGols" : 4,
+    "JogadorB" : {
+      "Id" : "1",
+      "Nome" : "Jira"
+    },
+    "JogadorBGols" : 2,
+    "NomeDesafiante" : "Érico",
+    "Origem" : "app",
+    "PosicaoA" : 4,
+    "PosicaoAntA" : 5,
+    "PosicaoAntB" : 3,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-24T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-24T12:52:21.475172-03:00",
+    "Id" : "04c562f0-dbd7-4339-86a1-72553c380e68",
+    "JogadorA" : {
+      "Id" : "11",
+      "Nome" : "Juiz"
+    },
+    "JogadorAGols" : 1,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 1,
+    "NomeDesafiante" : "Juiz",
+    "Origem" : "app",
+    "PosicaoA" : 6,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 5,
+    "PosicaoB" : 4,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-25T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-25T13:58:07.279087-03:00",
+    "Id" : "ebe8d95f-81b3-4dab-8451-1e482d47a9f2",
+    "JogadorA" : {
+      "Id" : "9",
+      "Nome" : "Gustavo"
+    },
+    "JogadorAGols" : 2,
+    "JogadorB" : {
+      "Id" : "8",
+      "Nome" : "Little"
+    },
+    "JogadorBGols" : 5,
+    "NomeDesafiante" : "Gustavo",
+    "Origem" : "app",
+    "PosicaoA" : 7,
+    "PosicaoAntA" : 8,
+    "PosicaoAntB" : 7,
+    "PosicaoB" : 6,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Troque de posição com o derrotado \nDERROTA DO INFERIOR: Dois pesos duas medidas, perderá a diferença de posições de quem desafiou \nVITÓRIA DO SUPERIOR: Mantenha posição \nEMPATE: Pra que todo o estresse!?",
+      "Nome" : "DesafioDentePorDente"
+    }
+  },
+{
+    "Data" : "2019-10-25T00:00:00-03:00",
+    "DataPublicacao" : "2019-10-25T13:23:45.094113-03:00",
+    "Id" : "f280f641-a2c7-4987-a3e5-3c1476330dc2",
+    "JogadorA" : {
+      "Id" : "2",
+      "Nome" : "Felipe"
+    },
+    "JogadorAGols" : 3,
+    "JogadorB" : {
+      "Id" : "4",
+      "Nome" : "Érico"
+    },
+    "JogadorBGols" : 2,
+    "NomeDesafiante" : "Felipe",
+    "Origem" : "app",
+    "PosicaoA" : 1,
+    "PosicaoAntA" : 3,
+    "PosicaoAntB" : 4,
+    "PosicaoB" : 2,
+    "Regra" : {
+      "Descricao" : "VITÓRIA DO INFERIOR: Ganhe a posição do líder \nDERROTA DO INFERIOR: Você é um lixo! Vá para última posição \nEMPATE: Você merece ser líder?",
+      "Nome" : "DesafioDoLíder"
+    }
+  }
+
+]

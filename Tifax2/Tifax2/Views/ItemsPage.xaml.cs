@@ -71,7 +71,8 @@ namespace TIFA.Views
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
 
-            var p = Navigation.NavigationStack.FirstOrDefault(a => a.GetType() == typeof(VersionVerifiyPage));
+            var p = Navigation.NavigationStack.FirstOrDefault(a => a.GetType() == typeof(VersionVerifiyPage)
+            || a.GetType() == typeof(IdentityPage));
 
             if (p != null)
             {

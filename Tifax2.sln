@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tifax2.Android", "Tifax2\Ti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tifax2", "Tifax2\Tifax2\Tifax2.csproj", "{93A67504-539B-4764-B4E2-C3BA6B7F4E5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tifax2.Tests", "Tifax2.Tests\Tifax2.Tests.csproj", "{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,18 @@ Global
 		{93A67504-539B-4764-B4E2-C3BA6B7F4E5A}.Release|iPhone.Build.0 = Release|Any CPU
 		{93A67504-539B-4764-B4E2-C3BA6B7F4E5A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{93A67504-539B-4764-B4E2-C3BA6B7F4E5A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|iPhone.Build.0 = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{26401A43-9E73-47A3-9BAF-6E2AD4DF333B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

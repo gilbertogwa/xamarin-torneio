@@ -23,9 +23,12 @@ namespace TIFA.Views
         {
             InitializeComponent();
 
-            Item = new Placar();
-            Item.Origem = "app";
-            if (Config.Current!= null)
+            Item = new Placar
+            {
+                Origem = "app"
+            };
+
+            if (Config.Current != null)
             {
                 Item.Regra = viewModel.Regras.FirstOrDefault(a => a.Nome == Config.Current.RegraDefault);
             }
@@ -39,24 +42,44 @@ namespace TIFA.Views
         async void Save_Clicked(object sender, EventArgs e)
         {
 
-            if (Item.JogadorA == null || Item.JogadorB == null ||
-                Item.JogadorAGols == null || Item.JogadorBGols == null)
+            if (Item.JogadorA == null)
             {
-                await DisplayAlert("Atenção", "Todos os campos são obrigatórios", "Ok");
+                await DisplayAlert("Atenção", "Selectione um jogador!", "Ok");
                 return;
+            } 
+
+            if (Item.Regra.Nome != RegrasBusiness.ESTOU_FORA)
+            {
+                if (Item.JogadorA == null || Item.JogadorB == null ||
+                    Item.JogadorAGols == null || Item.JogadorBGols == null)
+                {
+                    await DisplayAlert("Atenção", "Todos os campos são obrigatórios", "Ok");
+                    return;
+                }
+            } else
+            {
+
+                var nome = Item.JogadorA.Nome;
+                var resp = await DisplayAlert("Tem certeza?", $"'{nome}' será retirado do jogo. É isso mesmo?", "Sim", "Não");
+
+                if (resp == false) return;
+
+                // Na regra "Estou fora!" o jogador A deve ser igual ao jogador B
+                Item.JogadorB = Item.JogadorA;
+                Item.JogadorAGols = 0;
+                Item.JogadorBGols = 1;
+
             }
-
-
 
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();
+
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
-
 
     }
 }

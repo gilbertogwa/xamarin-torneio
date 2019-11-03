@@ -59,6 +59,11 @@ namespace TIFA.Droid.Services
         {
         }
 
+        public Task<bool> SaveAll(IEnumerable<Jogador> items)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> UpdateItemAsync(Jogador item)
         {
             return await Task.FromResult(true);
