@@ -15,7 +15,7 @@ namespace TIFA.Views
     public partial class VersionVerifiyPage : ContentPage
     {
 
-        public const string VERSAO_DATABASE = "8";
+        public const string VERSAO_DATABASE = "10";
 
         public VersionVerifiyPage()
         {

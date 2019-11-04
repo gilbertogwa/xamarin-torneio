@@ -35,12 +35,13 @@ namespace TIFA.Droid.Services
 
         public async Task<bool> SaveAll(IEnumerable<Classificacao> classificao)
         {
-            var db = _database.Child($"classificacao");
+            var db = _database.Child("classificacao/");
 
             var dic = classificao.ToDictionary(a => a.Jogador);
+
             var json = JsonConvert.SerializeObject(dic);
 
-            await db.PostAsync(json);
+            await db.PutAsync(json);
 
             return await Task.FromResult(true);
         }
