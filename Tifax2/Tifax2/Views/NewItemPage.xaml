@@ -28,7 +28,7 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Data" FontSize="Medium"  />
-                    <DatePicker Grid.Row="1" Grid.Column="0" WidthRequest="100"
+                    <DatePicker Grid.Row="1" Grid.Column="0" WidthRequest="110"
                             FontSize="Medium" Date="{Binding Item.Data}"
                        ></DatePicker>
 
