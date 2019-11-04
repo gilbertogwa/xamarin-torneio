@@ -98,9 +98,8 @@ namespace TIFA.ViewModels
                                     .OrderBy(a => a.Posicao)
                                     .ToArray();
 
-            await ExecuteLoadClassificacaoCommand(novaLista);
-
-            _ = DataStore.SaveAll(clas);
+            await DataStore.SaveAll(classifs);
+            await ExecuteLoadClassificacaoCommand(novaLista);           
 
         }
 

@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using TIFA.Models;
 using TIFA.Views;
 using TIFA.ViewModels;
+using Xamarin.Essentials;
 
 namespace TIFA.Views
 {
@@ -64,8 +65,9 @@ namespace TIFA.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage(viewModel)));
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
+
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
@@ -77,6 +79,14 @@ namespace TIFA.Views
             if (p != null)
             {
                 Navigation.RemovePage(p);
+            }
+
+            var user = await SecureStorage.GetAsync("user");
+
+            if (string.IsNullOrWhiteSpace(user) == false)
+            {
+                lblNome.Text = user;
+                painelIdentificacao.IsVisible = true;
             }
 
         }

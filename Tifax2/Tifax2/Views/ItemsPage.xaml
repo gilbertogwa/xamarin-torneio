@@ -106,7 +106,11 @@
                 </dg:PaletteCollection>
             </dg:DataGrid.RowsBackgroundColorPalette>
         </dg:DataGrid>
-        
+
+        <StackLayout Margin="5,20,0,5" x:Name="painelIdentificacao" Orientation="Horizontal" IsVisible="False">
+            <Label>Logado como:</Label>
+            <Label x:Name="lblNome"/>
+        </StackLayout>
 
     </StackLayout>
     
