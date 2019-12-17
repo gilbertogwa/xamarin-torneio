@@ -65,7 +65,11 @@ namespace TIFA.Droid.Services
                 var message = ex.Message;
                 throw;
             }
-            
+
+            if (response == null)
+            {
+                return Array.Empty<Placar>();
+            }
 
             var itens = response.Where(a => a.Key != null)
                 .Select(a => a.Value)
